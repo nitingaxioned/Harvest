@@ -112,11 +112,12 @@ header{
   position: fixed;
   top: 0;
   background-color: #ffffff;
+  z-index: 1;
 }
 
 header .wrapper{
   width: 97%;
-  padding: 13px 0 16px;
+  padding: 13px 0 12px;
   display: flex;
   justify-content: space-between;
 }
@@ -175,7 +176,93 @@ nav{ width: 80%; }
   main styling starts here
 =================================*/
 
+/*=================================
+  index banner styling starts here
+=================================*/
 
+.banner .wrapper{ 
+  width: 100%; 
+  overflow: hidden;
+  position: relative;
+}
+
+.slider{  display: flex; }
+.slider-transition{transition: all .5s ease-in-out ;}
+
+.slide{
+  min-width: 100%;
+  position: relative;
+}
+
+.slide-content{
+  box-sizing: border-box;
+  width: 50%;
+  padding: 15.5px 1.1%;
+  position: absolute;
+  top: 282px;
+  left: 50%;
+  background-color: #f17140;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.slide-content span{ text-transform: uppercase; }
+
+.slide a{
+  padding: 6.5px 1.6% 10.5px 1.1%;
+  position: absolute;
+  top: 359px;
+  left: 50%;
+  background-color: #ffffff;
+  color: #f17140;
+  font-size: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+.slide a::after{
+  content: "\f105";
+  position: relative;
+  top: 1px;
+  right: -10%;
+  font: 13px "FontAwesome";
+}
+
+.slider-controls{
+  width: 100%;
+  position: absolute;
+  top: 206px;
+  left: 0;
+}
+
+.slider-controls a{
+  display: inline-block;
+  text-indent: -9999px;
+  position: absolute;
+}
+
+.slider-controls a::after {
+  position: absolute;
+  color: #dfe7f0;
+  font: 14px "FontAwesome";
+  text-indent: 0;
+}
+
+.previous-slider-btn::after{ 
+  content: "\f053"; 
+  left:  7vw;
+}
+
+.next-slider-btn::after{ 
+  content: "\f054";
+  left: 91vw;
+}
+
+/*=================================
+  index banner ends here
+=================================*/
 
 
 
