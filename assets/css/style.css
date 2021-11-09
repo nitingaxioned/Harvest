@@ -275,7 +275,7 @@ nav{ width: 80%; }
 
 .help h2 {
   padding: 21px 0 36px;
-  color: #484848;
+  color: #3d3c41;
   font: 600 18px sans-serif;
   text-transform: uppercase;
 }
@@ -290,15 +290,69 @@ nav{ width: 80%; }
   help section styling ends here
 =================================*/
 
-/*=================================
-  help section styling starts here
-=================================*/
+/*======================================
+  services section styling starts here
+======================================*/
 
+.services .wrapper { 
+  width: 60%;
+  text-align: center; 
+}
 
+.services h2 {
+  padding: 46px 0 53px;
+  color: #3d3c41;
+  font: 600 18px sans-serif;
+  text-transform: uppercase;
+}
 
-/*=================================
-  help section styling ends here
-=================================*/
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service-icon { cursor: pointer; }
+
+.service-item { 
+  flex-basis: 20%; 
+  padding: 0 0 13px;
+}
+
+.service-item:nth-child(5) figure { margin: 18px 0 17px; }
+
+.service-item span {
+  padding: 22px 15%;
+  color: #555555;
+  display: block;
+  font: 600 12px sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+}
+
+.service-item:nth-child(1),
+.service-item:nth-child(7) { transform: translateY(-7px); }
+
+.service-item img { width: 52%; }
+
+.service-icon a {
+  margin: 35px 0 12px;
+  text-indent: -9999px;
+}
+
+.service-icon a::after {
+  content: "\f061";
+  margin: 0 2% 0 0;
+  color: #F17140;
+  font-family: FontAwesome;
+  font-size: 25px;
+  float: right;
+  text-indent: 0;
+}
+
+/*====================================
+  services section styling ends here
+====================================*/
 
 
 
