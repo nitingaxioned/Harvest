@@ -100,7 +100,7 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 58%; 
+  width: 58.3%; 
   margin: 0 auto;
 }
 /*=================================
@@ -366,25 +366,47 @@ nav{ width: 80%; }
 }
 
 .latest-work h2 {
-  padding: 65px 0 14px;
+  padding: 64px 0 16px;
   color: #3d3c41;
   font: 600 18px Arial;
   text-transform: uppercase;
 }
 
 .latest-work a {
-  margin: 0 0 45px;
+  margin: 0 0 25px;
   color: #3d3c41;
   font: 600 11px "Arial Narrow";
   text-transform: uppercase;
 }
 
-.portfolio { display: flex; }
+.portfolio { 
+  display: flex;
+  position: relative;
+}
 
 .portfolio-item {
   width: 25%;
   cursor: pointer;
 }
+
+.portfolio::before,
+.portfolio::after{
+  content: "";
+  width: 100%;
+  padding: 9.5px 0;
+  position: absolute;
+}
+
+.portfolio::before{
+  top: 0px;
+  background: #efefef;
+}
+
+.portfolio::after{
+  bottom: 0px;
+  background: #eb6137;
+}
+
 
 /*======================================
   latest-work section styling ends here
@@ -406,12 +428,12 @@ nav{ width: 80%; }
 
 .latest-work-modal::after{
   content: "\f00d";
-  font-family: FontAwesome;
   position: fixed;
   top: 20px;
   right: 1.5%;
-  font-size: 28px;
   color: #ffffff;
+  font-family: FontAwesome;
+  font-size: 28px;
   cursor: pointer;
 }
 
@@ -432,14 +454,14 @@ nav{ width: 80%; }
 =======================================*/
 
 .work-with {
-  padding-bottom: 72px;
+  padding-bottom: 62px;
   background: #eb6137;
   text-align: center;
 }
 
 .work-with h2 {
-  padding: 64px 0 36px 0;
-  color: #fff;
+  padding: 46px 0 33px 0;
+  color: #ffffff;
   font: 600 18px Arial;
   text-transform: uppercase;
 }
@@ -451,13 +473,51 @@ nav{ width: 80%; }
   align-items: center;
 }
 
-.client { width: 18%; }
+.client { 
+  width: 17.8%; 
+  margin-bottom: 7px;
+}
 
 /*======================================
   work with  section styling ends here
 ======================================*/
 
+/*=======================================
+  work with section styling starts here
+=======================================*/
 
+.affiliations {
+  padding-bottom: 64px;
+  background: #f3f3f3;
+  text-align: center;
+}
+
+.affiliations .wrapper{ width: 58.3%; }
+
+.affiliations h2 {
+  padding-top: 65px;
+  margin-bottom: 15px;
+  color: #3d3c41;
+  font: 600 18px Arial;
+  text-transform: uppercase;
+}
+
+.affiliated-partners {
+  margin-top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.affiliated-partner {
+  width: 22.95%;
+  margin-bottom: 21px;
+}
+
+/*======================================
+  work with  section styling ends here
+======================================*/
 
 
 
