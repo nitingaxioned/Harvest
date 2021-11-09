@@ -100,7 +100,7 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 58%; 
   margin: 0 auto;
 }
 /*=================================
@@ -109,7 +109,7 @@ li {
 
 header{
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   background-color: #ffffff;
   z-index: 1;
@@ -173,11 +173,11 @@ nav{ width: 80%; }
 =================================*/  
 
 /*=================================
-  main styling starts here
+  main styling starts here for index
 =================================*/
 
 /*=================================
-  index banner styling starts here
+  banner styling starts here
 =================================*/
 
 .banner .wrapper{ 
@@ -261,7 +261,43 @@ nav{ width: 80%; }
 }
 
 /*=================================
-  index banner ends here
+  banner styling ends here
+=================================*/
+
+/*=================================
+  help section styling starts here
+=================================*/
+
+.help { 
+  padding: 0 0 58px;
+  text-align: center;
+}
+
+.help h2 {
+  padding: 21px 0 36px;
+  color: #484848;
+  font: 600 18px sans-serif;
+  text-transform: uppercase;
+}
+
+.help p {
+  color: #555555;
+  font-size: 12px;
+  line-height: 1.82;
+}
+
+/*=================================
+  help section styling ends here
+=================================*/
+
+/*=================================
+  help section styling starts here
+=================================*/
+
+
+
+/*=================================
+  help section styling ends here
 =================================*/
 
 
@@ -269,8 +305,9 @@ nav{ width: 80%; }
 
 
 
+
 /*=================================
-  main styling ends here
+  main styling ends here for index
 =================================*/
 
 /*=================================
