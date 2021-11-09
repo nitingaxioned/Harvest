@@ -567,6 +567,7 @@ textarea,
   color: #555555;
   font-size: 12px;
   margin-top: 4px;
+  padding: 9px 1.2%;
 }
 
 textarea,
@@ -581,7 +582,7 @@ textarea,
   font: 14px "Arial Narrow";
 }
 
-textarea{ min-height: 85px; }
+textarea{ min-height: 86px; }
 .checkbox-group{ flex-direction: row; }
 .checkbox-group a{ color: #eb6137; }
 
@@ -597,7 +598,7 @@ textarea{ min-height: 85px; }
 }
 
 .form-groups p {
-  margin: 10px 1%;
+  margin: 9px 1% 10px;
   font-size: 12px;
   line-height: 1.4;
   text-align: left;
@@ -640,12 +641,95 @@ textarea{ min-height: 85px; }
   footer styling starts here
 =================================*/ 
 
+footer {
+  background: #3c3b3b;
+  color: #ededed;
+  text-align: center;
+  font-size: 11.5px; 
+}
+
+footer a,
+footer p { color: #ededed; }
+
+footer h5 {
+  padding: 64px 0 23px 0;
+  font: 600 18px Arial;
+  text-transform: capitalize;
+  text-align: left;
+}
+
+.company-info { display: flex; }
+
+.get-in-touch-company {
+  display: flex;
+  flex-direction: column;
+}
+
+.information {
+  width: 25%;
+  margin-left: 6.5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.get-in-touch-company ul {
+  width: 73%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transform: translateY(-2px);
+}
+
+.get-in-touch-company li,
+.information li { padding: 0 0 12px; }
+
+.get-in-touch-company a,
+.get-in-touch-company address {
+  font-size: 11px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.get-in-touch-company a::after,
+.get-in-touch-company address::after {
+  float: left;
+  font-family: FontAwesome; 
+  position: absolute;
+  left: -15px;
+  text-indent: 0;
+}
+
+.information ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.telephone::after { content: '\f095'; }
+.infoMail::after { content: '\f0e0'; }
+footer p { margin: 25px 0 40px; }
+.footer-social-icons { padding-bottom: 27px; }
+address{ line-height: 17px; }
 
 
+.Co-Address::after { 
+  content: '\f041'; 
+  transform: translateY(-17px);
+}
 
+.footer-social-icons a { 
+  padding: 3px 3.5px;
+  text-indent: -9999px;
+}
 
-
-
+.footer-social-icons a::after {
+  color: #ededed;
+  float: right;
+  font: 23px FontAwesome;
+  text-indent: 0;
+}
  /*=================================
   footer styling ends here
 =================================*/ 
