@@ -107,10 +107,65 @@ li {
   Header styling starts here
 =================================*/
 
+header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #ffffff;
+}
 
+header .wrapper{
+  width: 97%;
+  padding: 13px 0 16px;
+  display: flex;
+  justify-content: space-between;
+}
 
+nav{ width: 80%; }
 
+.nav-list{
+  margin: 6px 1.95% 0 0;
+  display: flex;
+  justify-content: center;
+}
 
+.nav-list li{
+  margin: 0 0.7% 0 1.97%;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.2px;
+}
+
+.nav-list a{ color: #3c3b3b; } 
+.nav-list .active-nav-item{ color: #F17140; }
+
+.header-social-icons{
+  width: 3.9%;
+  padding: 2px 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateX(-9%);
+}
+
+.header-social-icons a {
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+  padding: 0 20%;
+}
+
+.header-social-icons a::after {
+  position: absolute;
+  right: 0;
+  color: #F17140;
+  font: 11px "FontAwesome";
+  text-indent: 0;
+}
+
+.facebook::after{ content: "\f082"; }
+.twitter::after{ content: "\f099"; }
+.instagram::after{ content: "\f16d"; }
+.linkedin::after { content: "\f0e1";}
 
 /*=================================
   Header styling ends here
