@@ -519,6 +519,111 @@ nav{ width: 80%; }
   work with  section styling ends here
 ======================================*/
 
+/*=======================================
+  Get in touch section styling starts here
+=======================================*/
+
+.get-in-touch {
+  padding-bottom: 56px;
+  background: #003e59;
+  color: #ffffff;
+  text-align: center;
+}
+
+.get-in-touch h2 {
+  padding: 50px 0 31px 0;
+  font: 600 22px Arial;
+}
+
+form { display: flex; }
+.form-groups{ width: 50%; }
+.form-groups:last-of-type { margin: 3px 0 0 2.56%;}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-size: 13px;
+  text-align: left;
+}
+
+textarea,
+.form-group input,
+#enquiries {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 1.2%;
+  margin-bottom: 15px;
+  border: none;
+  border-right: none;
+  background: #ffffff;
+}
+
+#enquiries { 
+  color: #555555;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+textarea,
+.form-group input:focus ,
+#enquiries:focus { outline: none; }
+
+.error{ 
+  position: absolute;
+  top: 2px;
+  right: 0.1%;
+  color: #ff5555;
+  font: 14px "Arial Narrow";
+}
+
+textarea{ min-height: 85px; }
+.checkbox-group{ flex-direction: row; }
+.checkbox-group a{ color: #eb6137; }
+
+.checkbox-group input{ 
+  width: 2.5%;
+  transform: translate(-4px, -4px);
+}
+
+.checkbox-group label{
+  display: inline;
+  line-height: 18px;
+  margin: 0;
+}
+
+.form-groups p {
+  margin: 10px 1%;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.form-control:last-of-type {
+  width: 100%;
+  display: inline-block;
+}
+
+ #submit {
+  margin: 13px 3.8% 0 0;
+  padding: 11px 5.2%;
+  border: 1px solid transparent;
+  background: #eb6137;
+  color: #ffffff;
+  font: 600 11px sans-serif;
+  right: 2%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  float: right;
+} 
+
+/*======================================
+  Get in touch section styling ends here
+======================================*/
 
 
 
