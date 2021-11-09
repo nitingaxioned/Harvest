@@ -138,7 +138,7 @@ nav{ width: 80%; }
 }
 
 .nav-list a{ color: #3c3b3b; } 
-.nav-list .active-nav-item{ color: #F17140; }
+.nav-list .active-nav-item{ color: #eb6137; }
 
 .header-social-icons{
   width: 3.9%;
@@ -158,7 +158,7 @@ nav{ width: 80%; }
 .header-social-icons a::after {
   position: absolute;
   right: 0;
-  color: #F17140;
+  color: #eb6137;
   font: 11px "FontAwesome";
   text-indent: 0;
 }
@@ -201,7 +201,7 @@ nav{ width: 80%; }
   position: absolute;
   top: 282px;
   left: 50%;
-  background-color: #f17140;
+  background-color: #eb6137;
   color: #ffffff;
   font-size: 14px;
   letter-spacing: 0.5px;
@@ -215,7 +215,7 @@ nav{ width: 80%; }
   top: 359px;
   left: 50%;
   background-color: #ffffff;
-  color: #f17140;
+  color: #eb6137;
   font-size: 8px;
   text-transform: uppercase;
   font-weight: bold;
@@ -343,7 +343,7 @@ nav{ width: 80%; }
 .service-icon a::after {
   content: "\f061";
   margin: 0 2% 0 0;
-  color: #F17140;
+  color: #eb6137;
   font-family: FontAwesome;
   font-size: 25px;
   float: right;
@@ -423,11 +423,39 @@ nav{ width: 80%; }
 
 .hide-me{ display: none; }
 
-
 /*=============================================
   latest-work modal section styling ends here
 =============================================*/
 
+/*=======================================
+  work with section styling starts here
+=======================================*/
+
+.work-with {
+  padding-bottom: 72px;
+  background: #eb6137;
+  text-align: center;
+}
+
+.work-with h2 {
+  padding: 64px 0 36px 0;
+  color: #fff;
+  font: 600 18px Arial;
+  text-transform: uppercase;
+}
+
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.client { width: 18%; }
+
+/*======================================
+  work with  section styling ends here
+======================================*/
 
 
 
