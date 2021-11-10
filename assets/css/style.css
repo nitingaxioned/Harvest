@@ -674,15 +674,16 @@ textarea{ min-height: 86px; }
   banner styling starts here for Join Us 
 =======================================*/
 
-
+.join-us-banner {
+  padding: 182px;
+  background: url('https://via.placeholder.com/1349x425?text=Join Us') no-repeat center;
+  text-indent: -9999px;
+}
 
 /*=======================================
   banner styling ends here for Join Us 
 =======================================*/
 
-/*=======================================
-  main styling ends here for Join Us 
-=======================================*/
 
 
 
@@ -828,6 +829,11 @@ address{ line-height: 17px; }
   }
 
   footer a:hover{ color: #eb6137; }
+
+  .harvest-history a:hover{
+    color: #ffffff;
+    background-color: #eb6137;
+  }
 
 }
 
