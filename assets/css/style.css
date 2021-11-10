@@ -811,15 +811,44 @@ textarea{ min-height: 86px; }
   benefits-perks styling ends here for Join Us 
 ==============================================*/
 
-/*=======================================
+/*===============================================
   harvest-values styling starts here for Join Us 
-=======================================*/
+===============================================*/
 
+.harvest-values { text-align: center; }
 
+.harvest-values h3 {
+  padding: 115px 0 43px 0;
+  box-sizing: border-box;
+  color: #3c3b3b;
+  font: 600 17px Arial;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 
-/*=======================================
+.values {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.harvest-value {
+  width: 19%;
+  margin: 2px 2%;
+  padding: 68px 0.5%;
+  border: 1px solid #eb6137;
+  background: #e4e6ee;
+  color: #eb6137;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 600 15px Arial;
+  text-transform: uppercase;
+}
+
+/*=============================================
   harvest-values styling ends here for Join Us 
-=======================================*/
+=============================================*/
 
 /*=======================================
   main styling ends here for Join Us 
