@@ -684,6 +684,44 @@ textarea{ min-height: 86px; }
   banner styling ends here for Join Us 
 =======================================*/
 
+/*================================================
+  harvest-history styling starts here for Join Us 
+================================================*/
+
+.harvest-history .wrapper { text-align: center;  }
+
+.harvest-history h2 {
+  margin: 29px 0;
+  color: #eb6137;
+  font: 600 31.5px Arial;
+}
+
+.harvest-history p {
+  margin-bottom: 29px;
+  color: #999999;
+  font: 14px Arial;
+  line-height: 1.5;
+  word-spacing: 2.8px;
+}
+
+.harvest-history a {
+  padding: 11px 2.67%;
+  font-size: 11px;
+  letter-spacing: 1px;
+  background: #ebebeb;
+  color: #777777;
+  transition: all .15s ease-in-out;
+}
+
+/*=============================================
+  harvest-history styling ends here for Join Us 
+==============================================*/
+
+/*=======================================
+  main styling ends here for Join Us 
+=======================================*/
+
+
 
 
 
