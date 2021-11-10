@@ -722,7 +722,27 @@ textarea{ min-height: 86px; }
 =======================================*/
 
 
+/*=======================================
+  main styling starts here for our Work
+=======================================*/
 
+/*=======================================
+  banner styling starts here for our Work
+=======================================*/
+
+.our-work-banner {
+  padding: 181px;
+  background: url('https://via.placeholder.com/1349x425?text=Our Work') no-repeat center;
+  text-indent: -9999px;
+}
+
+/*=======================================
+  banner styling ends here for our Work
+=======================================*/
+
+/*=======================================
+  main styling ends here for our Work
+=======================================*/
 
 
 /*=================================
