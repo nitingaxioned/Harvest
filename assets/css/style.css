@@ -137,7 +137,11 @@ nav{ width: 80%; }
   letter-spacing: 0.2px;
 }
 
-.nav-list a{ color: #3c3b3b; } 
+.nav-list a{ 
+  color: #3c3b3b; 
+  transition: color .15s ease-in-out;
+} 
+
 .nav-list .active-nav-item{ color: #eb6137; }
 
 .header-social-icons{
@@ -161,6 +165,7 @@ nav{ width: 80%; }
   color: #eb6137;
   font: 11px "FontAwesome";
   text-indent: 0;
+  transition: color .15s ease-in-out;
 }
 
 .facebook::after{ content: "\f082"; }
@@ -220,6 +225,7 @@ nav{ width: 80%; }
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.3px;
+  transition: all .15s ease-in-out;
 }
 
 .slide a::after{
@@ -241,11 +247,12 @@ nav{ width: 80%; }
   display: inline-block;
   text-indent: -9999px;
   position: absolute;
+  transition: all .15s ease-in-out;
+  color: #dfe7f0;
 }
 
 .slider-controls a::after {
   position: absolute;
-  color: #dfe7f0;
   font: 14px "FontAwesome";
   text-indent: 0;
 }
@@ -312,8 +319,6 @@ nav{ width: 80%; }
   flex-wrap: wrap;
 }
 
-.service-icon { cursor: pointer; }
-
 .service-item { 
   flex-basis: 20%; 
   padding: 0 0 13px;
@@ -338,12 +343,12 @@ nav{ width: 80%; }
 .service-icon a {
   margin: 35px 0 12px;
   text-indent: -9999px;
+  color: #eb6137;
 }
 
 .service-icon a::after {
   content: "\f061";
   margin: 0 2% 0 0;
-  color: #eb6137;
   font-family: FontAwesome;
   font-size: 25px;
   float: right;
@@ -387,6 +392,8 @@ nav{ width: 80%; }
 .portfolio-item {
   width: 25%;
   cursor: pointer;
+  opacity: 1;
+  transition: all .15s ease-in-out;
 }
 
 .portfolio::before,
@@ -395,6 +402,7 @@ nav{ width: 80%; }
   width: 100%;
   padding: 9.5px 0;
   position: absolute;
+  z-index: 2;
 }
 
 .portfolio::before{
@@ -420,7 +428,7 @@ nav{ width: 80%; }
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 3;
+  z-index: 5;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.9);
@@ -454,6 +462,8 @@ nav{ width: 80%; }
 =======================================*/
 
 .work-with {
+  position: relative;
+  z-index: 1;
   padding-bottom: 62px;
   background: #eb6137;
   text-align: center;
@@ -482,9 +492,9 @@ nav{ width: 80%; }
   work with  section styling ends here
 ======================================*/
 
-/*=======================================
-  work with section styling starts here
-=======================================*/
+/*=========================================
+  affiliations section styling starts here
+=========================================*/
 
 .affiliations {
   padding-bottom: 64px;
@@ -513,11 +523,12 @@ nav{ width: 80%; }
 .affiliated-partner {
   width: 22.95%;
   margin-bottom: 21px;
+  transition: all 0.15s ease-in-out;
 }
 
-/*======================================
-  work with  section styling ends here
-======================================*/
+/*========================================
+  affiliations  section styling ends here
+========================================*/
 
 /*=======================================
   Get in touch section styling starts here
@@ -618,6 +629,7 @@ textarea{ min-height: 86px; }
   font: 600 11px Arial;
   right: 2%;
   float: right;
+  transition: all .15s ease-in-out;
 } 
 
 .form-sumit-modal{
@@ -648,19 +660,34 @@ textarea{ min-height: 86px; }
   Get in touch section styling ends here
 ======================================*/
 
-
-
-
-
-
-
-
 /*=================================
   main styling ends here for index
-=================================*/
+==================================*/
+
+
+
+/*=======================================
+  main styling starts here for Join Us 
+=======================================*/
+
+/*=======================================
+  banner styling starts here for Join Us 
+=======================================*/
+
+
+
+/*=======================================
+  banner styling ends here for Join Us 
+=======================================*/
+
+/*=======================================
+  main styling ends here for Join Us 
+=======================================*/
+
+
 
 /*=================================
-  footer styling starts here
+  footer styling  here
 =================================*/ 
 
 footer {
@@ -743,10 +770,10 @@ address{ line-height: 17px; }
 .footer-social-icons a { 
   padding: 3px 3.5px;
   text-indent: -9999px;
+  color: #ededed;
 }
 
 .footer-social-icons a::after {
-  color: #ededed;
   float: right;
   font: 23px FontAwesome;
   text-indent: 0;
@@ -757,37 +784,176 @@ address{ line-height: 17px; }
 
 /*media query starts*/
 
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+/*media query for 1280px starts here*/
+@media only screen and (max-width: 1280px) {
 
+  .slider{  margin-top: 47px; }
+  .slider-controls{ top: 19vw; }
+  .slide-content{ top: 17vw; }
+  .slide a{ top: 26vw; }
+  .wrapper{ width: 70%; }
+  .checkbox-group input{ width: 15px; }
 
+}
+
+/*media query for 1024px starts here*/
+@media only screen and (min-width: 1024px) {
+
+  nav a:hover{ color: #eb6137; } 
+  .header-social-icons a:hover::after{ color: #3c3b3b; }
+  .slider-controls a:hover { color: #ffffff; }
+
+  .slide a:hover { 
+    background-color: #eb6137;
+    color: #ffffff;
+  }
+
+  .service-icon a:hover { color: #ff5555; }
+
+  .portfolio-item:hover { 
+    opacity: 0.8; 
+    transform: translateY(18px);
+  }
+
+  .affiliated-partner:hover{
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px #bbbbbb;
+  }
+
+  .get-in-touch a:hover { color: #ff5555; }
+
+  #submit:hover { 
+    color: #3c3b3b;
+    background-color: #ffffff;
+  }
+
+  footer a:hover{ color: #eb6137; }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .header-social-icons a { padding: 0 14px 0 0; }
+  .header-social-icons{
+    padding: 4px 30px 0;
+    transform: translateX(0);
+  }
+
+  .services .wrapper,
+  .affiliations .wrapper,
+  .wrapper{ width: 80%; }
 
 }
 
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
 
-
-
-}
-
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
+  .portfolio::before,
+  .portfolio::after{ content: none; }
 
 }
 
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+/*media query for 720px starts here*/
+@media only screen and (max-width: 720px) {
 
+  .portfolio { flex-wrap: wrap; }
+  .portfolio-item { width: 50%; }
+  .services .wrapper,
+  .affiliations .wrapper,
+  .wrapper{ width: 70%; }
+  form,
+  .company-info { flex-direction: column; }
+  .Co-Address::after { transform: translateY(0); }
+  .form-groups{ width: 100%; }
+  .form-groups:last-of-type { margin: 0;}
+  .affiliated-partner { width: 48%; }
+  .client { width: 34%; }
+  .service-item { flex-basis: 50%; }
 
+  .slide-content{ 
+    width: 60%;
+    left: 40%;
+    top: 140px;
+    padding: 8px 2%;
+    font-size: 12px;
+  }
 
-}
+  .slide img{ min-height: 250px; }
+  .slider-controls{ top: 155px; }
 
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+  .slide a{ 
+    top: 205px; 
+    left: 40%;
+  }
 
+  .work-with { position: static; }
+  .hide-me-mobile{ display: none; }
 
+  .nav-list{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    margin: 0;
+    flex-direction: column;
+    text-align: center;
+    background-color: #3c3b3b;
+  }
 
+  .get-in-touch-company ul { width: 90%; }
+  .nav-list li{ padding: 10px; }
+  .nav-list a{ color: #efefef; }
+
+  .header-social-icons{
+    position: fixed;
+    z-index: 4;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-77%);
+  }
+
+  nav::after{
+    content: "\f0c9";
+    position: absolute;
+    z-index: 4;
+    top: 10px;
+    right: 10px;
+    color: #eb6137;
+    font-family: FontAwesome;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .nav-cross::after{ content: "\f00d"; }
 }  
+
+/*media query for 540px starts here*/
+@media only screen and (max-width: 540px) {
+
+  .services .wrapper,
+  .affiliations .wrapper,
+  .wrapper{ width: 90%; }
+  .work-with .wrapper { width: 70%; }
+  .client { width: 35%; }
+
+  .slide-content{ 
+    width: 85%;
+    left: 15%;
+    top: 90px;
+    padding: 8px 3%;
+  }
+
+  .latest-work-modal figure { margin: 90% 0 0 50%; }
+  .slide img{ min-height: 170px; }
+  .slider-controls{ top: 110px; }
+
+  .slide a{ 
+    top: 140px; 
+    left: 50%;
+    padding: 3.5px 2.6% 7.5px 2.1%;
+    transform: translateX(-50%);
+  }
+
+}
