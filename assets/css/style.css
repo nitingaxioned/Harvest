@@ -709,6 +709,7 @@ textarea{ min-height: 86px; }
   font-size: 11px;
   letter-spacing: 1px;
   background: #ebebeb;
+  border-radius: 3px;
   color: #777777;
   transition: all .15s ease-in-out;
 }
@@ -716,6 +717,47 @@ textarea{ min-height: 86px; }
 /*=============================================
   harvest-history styling ends here for Join Us 
 ==============================================*/
+
+/*=======================================
+  harvester styling starts here for Join Us 
+=======================================*/
+
+.harvester { text-align: center; }
+
+.harvester h2 {
+  padding: 87px 0 47px 0;
+  box-sizing: border-box;
+  color: #3c3b3b;
+  font: 600 18px Arial;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.harvester-content {
+  margin-bottom: 53px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.harvester-content p {
+  width: 50%;
+  padding: 1px 1.6% 0 1.4%;
+  box-sizing: border-box;
+  color: #777777;
+  font: 14px Arial;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.harvester-content figure { 
+  width: 47.2%;
+  transform: translateX(-3%);
+}
+
+/*=======================================
+  harvester styling ends here for Join Us 
+=======================================*/
 
 /*=======================================
   main styling ends here for Join Us 
