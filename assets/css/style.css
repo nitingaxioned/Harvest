@@ -850,6 +850,112 @@ textarea{ min-height: 86px; }
   harvest-values styling ends here for Join Us 
 =============================================*/
 
+/*=============================================
+  oppotunities  styling starts here for Join Us 
+=============================================*/
+
+.opportunities .wrapper { 
+  width: 60%; 
+  padding-bottom: 16px;
+}
+
+.opportunities h2 {
+  padding-top: 98px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  color: #3c3b3b;
+  font: 600 17px Arial;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.job-categories {
+  width: 14%;
+  padding: 10px 1% 9px 0.5%;
+  margin: 25px 10%;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  box-shadow: 3px 3px 5px 0 rgba(0,0,0, 0.05);
+  background: #ffffff;
+  color: #666666;
+  display: block;
+  font-size: 9px;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+}
+
+.jobs {
+  margin: 20px 10%;
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,.13);
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #eeeeee;
+}
+
+.job {
+  padding: 19px 2% 13.5px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+  box-shadow: 3px 3px 5px 0 rgba(0,0,0,.05);
+  background: #ffffff;
+  justify-content: space-between;
+  font-size: 10px;
+  letter-spacing: 1px;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+}
+
+.job-details {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+  flex-basis: 50%;
+  color: #666666;
+}
+
+.more-details ,
+.job > span {
+  color: #eb6137;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.job-cat::before ,
+.more-details::after ,
+.timing::before {
+  margin-right: 3px;
+  font-family: FontAwesome;
+  float: left;
+}
+
+.job-cat::before  { content: "\f1ad"; }
+.timing::before { content: "\f042"; }
+
+.more-details,
+.timing,
+.job-cat { 
+  display: inline-block;
+  font-size: 8.8px;
+ }
+
+ .timing { padding: 0 7px; }
+
+.more-details::after { 
+  content: "\f178";
+  float: right;
+  font-size: 6px;
+  font-family: FontAwesome;
+  transform: translate(2px, 4px);
+ }
+
+/*============================================
+  oppotunities  styling ends here for Join Us 
+============================================*/
+
 /*=======================================
   main styling ends here for Join Us 
 =======================================*/
