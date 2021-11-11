@@ -13,7 +13,7 @@ document.querySelector("nav").addEventListener("click", function(){
 document.querySelector(".nav-list").addEventListener("click", function(e){ e.stopPropagation(); });
 
 
-// Filtering JS as Page
+// Filter JS as Page
 
 // geting page titel
 var pageTitle = document.querySelector("title").innerHTML.replace("Harvest | ","");
@@ -31,21 +31,28 @@ if(pageTitle == "Join Us")
 function index(){
     // Latest Work Modal/LightBox
 
-    var modal = document.querySelector(".latest-work-modal");
     // click Event on Latest Work list
     document.querySelectorAll(".portfolio-item").forEach(function(val){
         val.addEventListener("click", function(){
-            modal.querySelector(".wrapper").innerHTML = "";
-            var tempNode = val.querySelector("figure").cloneNode();
-            tempNode.innerHTML = val.querySelector("figure").innerHTML;
-            modal.querySelector(".wrapper").appendChild(tempNode);
-            modal.classList.remove("hide-me");
-            // click event to to stope propagation
-            tempNode.addEventListener("click", function(e){ e.stopPropagation(); });
-            // click event to close modal
-            modal.addEventListener("click", function(){ this.classList.add("hide-me") });
+            displayModal(val.querySelector("figure").cloneNode(true));
         });
     });
+
+    // validation on form submition
+    document.querySelector("#submit").addEventListener("click", getInTouchValidate);
+
+    // event listner for fullname input
+    document.querySelector("#fullname").addEventListener("keyup", fullnameValidate);
+
+    // event listner for email input
+    document.querySelector("#email").addEventListener("keyup", emailValidate);
+    document.querySelector("#email").addEventListener("blur", emailSyntaxValidate);
+
+    // event listner for company input
+    document.querySelector("#company").addEventListener("keyup", companyValidate);
+
+    // event listner for message input
+    document.querySelector("#message").addEventListener("keyup", messageValidate);
 }
 
 function joinUs(){
@@ -97,22 +104,46 @@ function ourWork(){
     });
 }
 
+function getInTouchValidate(){
+    var flag = 0;
+    fullnameValidate() || flag++;
+    emailSyntaxValidate() || flag++;
+    companyValidate() || flag++;
+    messageValidate() || flag++;
+    if( flag==0 ){
+        var tempNode = document.querySelector(".form-sumit-modal").cloneNode(true);
+        tempNode.classList.remove("hide-me");
+        tempNode.querySelector(".name").innerHTML = document.querySelector("#fullname").value;
+        displayModal(tempNode);
+        clearForm(document.querySelector(".get-in-touch form"));
+        return true;
+    } else
+        return false;
+}
 
+function fullnameValidate(){ return true; }
+function emailValidate(){ return true; }
+function emailSyntaxValidate(){ return true; }
+function companyValidate(){ return true; }
+function messageValidate(){ return true; }
 
+function displayModal(tempNode){
+    var modal = document.querySelector(".latest-work-modal");
+    modal.querySelector(".wrapper").innerHTML = "";
+    modal.classList.remove("hide-me");
+    modal.querySelector(".wrapper").appendChild(tempNode);
+    // click event to to stope propagation
+    modal.firstElementChild.addEventListener("click", function(e){ e.stopPropagation(); });
+    // click event to close modal
+    modal.addEventListener("click", function(){ this.classList.add("hide-me") });
+    if(modal.querySelector("a") != null)
+        modal.querySelector("a").addEventListener("click",function(){modal.classList.add("hide-me")});
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+function clearForm(formNode){
+    formNode.reset();
+    formNode.querySelectorAll("error").forEach(function(val){val.classList.add("hide-me");});
+}
 
 
 

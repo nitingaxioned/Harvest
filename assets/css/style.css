@@ -630,6 +630,7 @@ textarea{ min-height: 86px; }
   right: 2%;
   float: right;
   transition: all .15s ease-in-out;
+  outline: none;
 } 
 
 .form-sumit-modal{
@@ -1273,6 +1274,7 @@ address{ line-height: 17px; }
 
   .work-with { position: static; }
   .hide-me-mobile{ display: none; }
+  nav { width: 0; }
 
   .nav-list{
     width: 100vw;
