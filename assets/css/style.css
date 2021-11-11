@@ -970,7 +970,7 @@ textarea{ min-height: 86px; }
 =======================================*/
 
 .our-work-banner {
-  padding: 181px;
+  padding: 181.5px;
   background: url('https://via.placeholder.com/1349x425?text=Our Work') no-repeat center;
   text-indent: -9999px;
 }
@@ -978,6 +978,56 @@ textarea{ min-height: 86px; }
 /*=======================================
   banner styling ends here for our Work
 =======================================*/
+
+/*===================================================
+  Portfolios-filter styling starts here for our Work
+===================================================*/
+
+.portfolios-filter .wrapper { width: 100%; }
+
+.portfolios-filter-btns {
+  margin: 0 21% 0 23.9%;
+  padding: 36px 0 48px;
+  text-align: center;
+}
+
+.portfolio-btn {
+  margin-bottom: 7px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.portfolio-btn a {
+  color: #3c3b3b;
+  font: 600 9px Arial;
+  cursor: pointer;
+}
+
+.portfolio-btn a.active { color: #eb6137; }
+
+.portfolio-btn::after {
+  content: '/';
+  padding: 0 4px;
+  color: #efefef;
+  font-size: 12px;
+}
+
+.portfolio-image-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.portfolio-item-img { width: 25%; }
+
+.portfolio-item-img figure {
+  max-width: 335px;
+  margin: 2.5px 2.5px 3px;
+}
+
+/*=================================================
+  Portfolios-filter styling ends here for our Work
+=================================================*/
 
 /*=======================================
   main styling ends here for our Work
