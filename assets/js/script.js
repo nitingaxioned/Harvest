@@ -57,7 +57,18 @@ portfolio_btns.forEach(function(val){
 });
 
 
-
+// Filter functionality in drop down menu
+var jobSelector = document.querySelector(".job-categories");
+jobSelector.addEventListener("change", function(){
+    document.querySelectorAll(".job").forEach(function(val){
+        if(jobSelector.value == "All Job Category")
+            val.classList.remove("hide-me");
+        else if(jobSelector.value == val.querySelector(".job-cat").getAttribute("data-val"))
+            val.classList.remove("hide-me");
+        else
+            val.classList.add("hide-me");
+    });
+});
 
 
 
