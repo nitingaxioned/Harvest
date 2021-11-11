@@ -415,7 +415,6 @@ nav{ width: 80%; }
   background: #eb6137;
 }
 
-
 /*======================================
   latest-work section styling ends here
 ======================================*/
@@ -807,6 +806,7 @@ textarea{ min-height: 86px; }
   transform: translatey(-2px);
 }
 
+
 /*==============================================
   benefits-perks styling ends here for Join Us 
 ==============================================*/
@@ -905,7 +905,6 @@ textarea{ min-height: 86px; }
   letter-spacing: 1px;
   outline: none;
   overflow: hidden;
-  position: relative;
 }
 
 .job-details {
@@ -1001,6 +1000,7 @@ textarea{ min-height: 86px; }
   color: #3c3b3b;
   font: 600 9px Arial;
   cursor: pointer;
+  transition: color .15s ease-in-out;
 }
 
 .portfolio-btn a.active { color: #eb6137; }
@@ -1013,6 +1013,7 @@ textarea{ min-height: 86px; }
 }
 
 .portfolio-image-list {
+  margin:  0 0 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -1141,6 +1142,7 @@ address{ line-height: 17px; }
   .slide a{ top: 26vw; }
   .wrapper{ width: 70%; }
   .checkbox-group input{ width: 15px; }
+  .job-categories { width: 20%; }
 
 }
 
@@ -1182,6 +1184,14 @@ address{ line-height: 17px; }
     background-color: #eb6137;
   }
 
+  .portfolio-btn a:hover { color: #eb6137; }
+  .portfolio-item-img img{ transition: all .15s ease-in-out; }
+
+  .portfolio-item-img img:hover { 
+    transform: scale(0.98); 
+    box-shadow: 4px 4px #666666;
+  }
+
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1192,6 +1202,7 @@ address{ line-height: 17px; }
     transform: translateX(0);
   }
 
+  .opportunities .wrapper,
   .services .wrapper,
   .affiliations .wrapper,
   .wrapper{ width: 80%; }
@@ -1203,12 +1214,32 @@ address{ line-height: 17px; }
 
   .portfolio::before,
   .portfolio::after{ content: none; }
+  .portfolio-item-img { width: 33.3%; }
+  .opportunities .wrapper{ width: 90%; }
+  .benefits-perks .perk { flex-basis: 50%; }
+  .perk:nth-child(3n) figure { width: 17%; }
+  .perk:nth-child(3n) span { margin-left: 3.2%; }
+  .harvest-values .wrapper { width: 95%; }
+
+  .harvest-value {
+    width: 17%;
+    min-height: 170px;
+    margin: 2px 1%;
+    padding: 0 0.5%;
+  }
 
 }
 
 /*media query for 720px starts here*/
 @media only screen and (max-width: 720px) {
+  
+  .our-work-banner,
+  .join-us-banner { 
+    padding: 110px; 
+    background-size: cover;
+  }
 
+  .portfolio-item-img { width: 50%; }
   .portfolio { flex-wrap: wrap; }
   .portfolio-item { width: 50%; }
   .services .wrapper,
@@ -1222,7 +1253,7 @@ address{ line-height: 17px; }
   .affiliated-partner { width: 48%; }
   .client { width: 34%; }
   .service-item { flex-basis: 50%; }
-
+  .opportunities .wrapper{ width: 98%; }
   .slide-content{ 
     width: 60%;
     left: 40%;
@@ -1280,6 +1311,36 @@ address{ line-height: 17px; }
   }
 
   .nav-cross::after{ content: "\f00d"; }
+
+  .harvester-content p { 
+    width: 100%;
+    text-align: center;
+  }
+
+  .harvester-content figure { 
+    width: 80%; 
+    margin-top: 20px;
+    transform: translateX(0);
+  } 
+
+  .values,
+  .harvester-content{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .harvest-value{ width: 40%; }
+  .jobs { margin: 20px 2%; }
+  .job { letter-spacing: 0.2px; }
+
+  .job-details{
+    float: none;
+    width: 100%;
+    justify-content: flex-start;
+    flex-basis: 100%;
+    padding: 8px 0 0;
+  }
+
 }  
 
 /*media query for 540px starts here*/
@@ -1290,6 +1351,7 @@ address{ line-height: 17px; }
   .wrapper{ width: 90%; }
   .work-with .wrapper { width: 70%; }
   .client { width: 35%; }
+  .job-categories { width: 30%; }
 
   .slide-content{ 
     width: 85%;
@@ -1307,6 +1369,14 @@ address{ line-height: 17px; }
     left: 50%;
     padding: 3.5px 2.6% 7.5px 2.1%;
     transform: translateX(-50%);
+  }
+
+  .our-work-banner,
+  .join-us-banner { padding: 80px; }
+
+  .benefits-perks .perk { 
+    flex-basis: 70%; 
+    margin-left: 20%;
   }
 
 }
