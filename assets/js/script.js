@@ -1,6 +1,5 @@
 /* Author: NDG */
 
-
 // Menu click Events
 
 // click Event on menu icon
@@ -15,7 +14,7 @@ document.querySelector(".nav-list").addEventListener("click", function(e){ e.sto
 
 // Filter JS as Page
 
-// geting page titel
+// getting page title
 var pageTitle = document.querySelector("title").innerHTML.replace("Harvest | ","");
 // setting JS of loaded page;
 if(pageTitle == "Home")
@@ -28,7 +27,7 @@ if(pageTitle == "Join Us")
 
 // Function For Index Page
 function index(){
-    // Latest Work Modal/LightBox
+    // Latest Work Modal/Light Box
 
     // click Event on Latest Work list
     document.querySelectorAll(".portfolio-item").forEach(function(val){
@@ -37,30 +36,30 @@ function index(){
         });
     });
 
-    // steup slider
-    // variable decleration
+    // setup slider
+    // variable declaration
     var slider = document.querySelector(".slider");
     var nextBtn = document.querySelector(".next-slider-btn");
     var pvrBtn = document.querySelector(".previous-slider-btn");
     // call to slider function
     setSlider(slider, nextBtn, pvrBtn);
 
-    // validation on form submition
+    // validation on form submission
     document.querySelector("#submit").addEventListener("click", getInTouchValidate);
 
-    // event listner for fullname input
+    // event listener for full name input
     document.querySelector("#fullname").addEventListener("keyup", fullnameValidate);
     document.querySelector("#fullname").addEventListener("focusout", fullnameValidate);
 
-    // event listner for email input
+    // event listener for email input
     document.querySelector("#email").addEventListener("keyup", emailValidate);
     document.querySelector("#email").addEventListener("focusout", emailSyntaxValidate);
 
-    // event listner for company input
+    // event listener for company input
     document.querySelector("#company").addEventListener("keyup", companyValidate);
     document.querySelector("#company").addEventListener("focusout", companyValidate);
 
-    // event listner for message input
+    // event listener for message input
     document.querySelector("#message").addEventListener("keyup", messageValidate);
     document.querySelector("#message").addEventListener("focusout", messageLenghtValidate);
 }
@@ -78,7 +77,7 @@ function joinUs(){
             //Filter for all
             if(jobSelector.value == "All Job Category")
                 val.classList.remove("hide-me");
-            // Filter for sellected
+            // Filter for selected
             else if(jobSelector.value == val.querySelector(".job-cat").getAttribute("data-val"))
                 val.classList.remove("hide-me");
             // Filter for rest to hide
@@ -90,7 +89,7 @@ function joinUs(){
 
 // function for our work
 function ourWork(){
-    // Our work Filter functionality
+    // our work Filter functionality
 
     // defined variables
     var portfolio_btns = document.querySelectorAll(".portfolio-btn a");
@@ -116,7 +115,7 @@ function ourWork(){
     });
 }
 
-// get n touch requst validation
+// get in touch request validation
 function getInTouchValidate(){
     var flag = 0;
     fullnameValidate() || flag++;
@@ -136,7 +135,7 @@ function getInTouchValidate(){
 
 // validate full name input
 function fullnameValidate(){ 
-    // variables decleration 
+    // variables declaration 
     var txt = document.querySelector("#fullname").value
     var txt_err = document.querySelector(".fullname-err");
     // blank string validation
@@ -164,19 +163,19 @@ function fullnameValidate(){
 
  // email input validation
 function emailValidate(){ 
-    // variables decleration 
+    // variables declaration 
     var txt = document.querySelector("#email").value
     var txt_err = document.querySelector(".email-err");
     // blank string validation
     if (txt.trim() != "") {
         txt_err.classList.add("hide-me");
-        // charecter validation
+        // character validation
         if (/^[A-Za-z0-9@_.]+$/.test(txt)) {
             txt_err.classList.add("hide-me");
-            // sting length vadation 
+            // sting length validation 
             if (txt.trim().length <= 25) {
                 txt_err.classList.add("hide-me");
-                // stings first charecter validation
+                // stings first character validation
                 if(/^[A-Za-z]{1}/.test(txt))
                     return true; 
                 else
@@ -197,7 +196,7 @@ function emailValidate(){
 // email syntax validation
 function emailSyntaxValidate(){ 
     if(emailValidate()){
-        // variables decleration 
+        // variables declaration 
         var txt = document.querySelector("#email").value
         var txt_err = document.querySelector(".email-err");
         // min length validation
@@ -297,7 +296,7 @@ function displayModal(tempNode){
         modal.querySelector("a").addEventListener("click",function(){modal.classList.add("hide-me")});
 }
 
-// function to clere form and errors
+// function to clear form and errors
 function clearForm(formNode){
     formNode.reset();
     formNode.querySelectorAll("error").forEach(function(val){val.classList.add("hide-me");});
@@ -316,14 +315,14 @@ function setSlider(slider, nextBtn, pvrBtn){
     // var for slide index
     var i = 1;
 
-    // seting up the dummy slides
+    // setting up the dummy slides
     // last dummy node
     slider.appendChild(slides[0].cloneNode(true));
     // first dummy node
     slider.insertBefore(slides[slides.length-1].cloneNode(true), slider.querySelector(".slide"));
     slider.style.transform = "translateX(-"+100*i+"%)";
 
-    // event listner for next btn
+    // event listener for next btn
     nextBtn.addEventListener("click",function(){
         if(i <= slides.length){
             slider.classList.add("slider-transition");
@@ -360,7 +359,3 @@ function setSlider(slider, nextBtn, pvrBtn){
         }
     });
 }
-
-
-
-
