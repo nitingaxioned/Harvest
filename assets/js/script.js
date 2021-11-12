@@ -27,7 +27,6 @@ if(pageTitle == "Join Us")
 
 
 // Function For Index Page
-
 function index(){
     // Latest Work Modal/LightBox
 
@@ -43,18 +42,22 @@ function index(){
 
     // event listner for fullname input
     document.querySelector("#fullname").addEventListener("keyup", fullnameValidate);
+    document.querySelector("#fullname").addEventListener("focusout", fullnameValidate);
 
     // event listner for email input
     document.querySelector("#email").addEventListener("keyup", emailValidate);
-    document.querySelector("#email").addEventListener("blur", emailSyntaxValidate);
+    document.querySelector("#email").addEventListener("focusout", emailSyntaxValidate);
 
     // event listner for company input
     document.querySelector("#company").addEventListener("keyup", companyValidate);
+    document.querySelector("#company").addEventListener("focusout", companyValidate);
 
     // event listner for message input
     document.querySelector("#message").addEventListener("keyup", messageValidate);
+    document.querySelector("#message").addEventListener("focusout", messageLenghtValidate);
 }
 
+// Function for Join us
 function joinUs(){
     // Filter functionality in drop down menu
 
@@ -77,6 +80,7 @@ function joinUs(){
     });
 }
 
+// function for our work
 function ourWork(){
     // Our work Filter functionality
 
@@ -104,12 +108,13 @@ function ourWork(){
     });
 }
 
+// get n touch requst validation
 function getInTouchValidate(){
     var flag = 0;
     fullnameValidate() || flag++;
     emailSyntaxValidate() || flag++;
     companyValidate() || flag++;
-    messageValidate() || flag++;
+    messageLenghtValidate() || flag++;
     if( flag==0 ){
         var tempNode = document.querySelector(".form-sumit-modal").cloneNode(true);
         tempNode.classList.remove("hide-me");
@@ -121,12 +126,156 @@ function getInTouchValidate(){
         return false;
 }
 
-function fullnameValidate(){ return true; }
-function emailValidate(){ return true; }
-function emailSyntaxValidate(){ return true; }
-function companyValidate(){ return true; }
-function messageValidate(){ return true; }
+// validate full name input
+function fullnameValidate(){ 
+    // variables decleration 
+    var txt = document.querySelector("#fullname").value
+    var txt_err = document.querySelector(".fullname-err");
+    // blank string validation
+    if (txt.trim() != "") {
+        txt_err.classList.add("hide-me");
+        // charecter validation
+        if (/^[A-Za-z ]+$/.test(txt)) {
+            txt_err.classList.add("hide-me");
+            // sting length vadation 
+            if (txt.trim().length <= 15) {
+                txt_err.classList.add("hide-me");
+                return true;
+            } else
+                return setError("The Name can be 15 characters max", txt_err);
+        } else 
+            return setError("The Name must include alphabetical characters only", txt_err);
+    } else {
+        // blank space validation
+        if (txt == "")
+            return setError("The Name field is required", txt_err);
+        else
+            return setError("The Name can't be blank space", txt_err);
+    }
+}
 
+ // email input validation
+function emailValidate(){ 
+    // variables decleration 
+    var txt = document.querySelector("#email").value
+    var txt_err = document.querySelector(".email-err");
+    // blank string validation
+    if (txt.trim() != "") {
+        txt_err.classList.add("hide-me");
+        // charecter validation
+        if (/^[A-Za-z0-9@_.]+$/.test(txt)) {
+            txt_err.classList.add("hide-me");
+            // sting length vadation 
+            if (txt.trim().length <= 25) {
+                txt_err.classList.add("hide-me");
+                // stings first charecter validation
+                if(/^[A-Za-z]{1}/.test(txt))
+                    return true; 
+                else
+                    return setError("The email should start with alphabetical character", txt_err);
+            } else
+                return setError("The email can be 25 characters max", txt_err);
+        } else 
+            return setError("The email has invalid character", txt_err);
+    } else {
+        // blank space validation
+        if (txt == "")
+            return setError("The email field is required", txt_err);
+        else
+            return setError("The email can't be blank space", txt_err);
+    }
+}
+
+// email syntax validation
+function emailSyntaxValidate(){ 
+    if(emailValidate()){
+        // variables decleration 
+        var txt = document.querySelector("#email").value
+        var txt_err = document.querySelector(".email-err");
+        // min length validation
+        if (/^[a-zA-Z._0-9]+@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,5}$/.test(txt.value)) {
+            txt_err.classList.add("hide-me");
+            return true; 
+        }
+        else 
+            return setError("This email is invalid", txt_err);
+    }
+    return false;
+}
+
+// Company name validation
+function companyValidate(){ 
+    // variables decleration 
+    var txt = document.querySelector("#company").value
+    var txt_err = document.querySelector(".company-err");
+    // blank string validation
+    if (txt.trim() != "") {
+        txt_err.classList.add("hide-me");
+        // charecter validation
+        if (/^[A-Za-z0-9 ]+$/.test(txt)) {
+            txt_err.classList.add("hide-me");
+            // sting length vadation 
+            if (txt.trim().length <= 20) {
+                txt_err.classList.add("hide-me");
+                // stings first charecter validation
+                if(/^[\d]{1}/.test(txt))
+                    return setError("The Company name can't start with numeric characters", txt_err);
+                else
+                    return true; 
+            }else 
+                return setError("The Company name can be 20 characters max", txt_err);
+        } else
+            return setError("The Company name must include alphanumeric characters only", txt_err);
+    } else {
+        if (txt == "")
+            return setError("The Company name field is required", txt_err);
+        else 
+            return setError("The Company name can't be blank space", txt_err);
+    }
+ }
+
+// Message validation
+function messageValidate(){ 
+    // variables decleration 
+    var txt = document.querySelector("#message").value
+    var txt_err = document.querySelector(".message-err");
+    // blank string validation
+    if (txt.trim() != "") {
+        txt_err.classList.add("hide-me");
+        // sting length vadation 
+        if (txt.trim().length <= 100){
+            txt_err.classList.add("hide-me");
+            return true; 
+        }
+        else 
+            return setError("The message can be 100 characters max", txt_err);
+    } else {
+        // blank space validation
+        if (txt == "")
+            return setError("The Name field is required", txt_err);
+        else
+            return setError("The Name can't be blank space", txt_err);
+    }
+}
+
+// Message validation
+function messageLenghtValidate(){
+    if(messageValidate()){
+        // variables decleration 
+        var txt = document.querySelector("#message").value
+        var txt_err = document.querySelector(".message-err");
+        // min length validation
+        if (txt.trim().length >= 5){
+            txt_err.classList.add("hide-me");
+            return true; 
+        }
+        else 
+            return setError("The message must be 5 characters minimum", txt_err);
+    }
+    return false;
+}
+
+// Display given node in modal
 function displayModal(tempNode){
     var modal = document.querySelector(".latest-work-modal");
     modal.querySelector(".wrapper").innerHTML = "";
@@ -140,12 +289,18 @@ function displayModal(tempNode){
         modal.querySelector("a").addEventListener("click",function(){modal.classList.add("hide-me")});
 }
 
+// function to clere form and errors
 function clearForm(formNode){
     formNode.reset();
     formNode.querySelectorAll("error").forEach(function(val){val.classList.add("hide-me");});
 }
 
-
+// set error
+function setError(errString, errNode){
+    errNode.innerHTML = errString;
+    errNode.classList.remove("hide-me");
+    return false;
+}
 
 
 
