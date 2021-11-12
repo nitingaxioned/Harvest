@@ -37,6 +37,14 @@ function index(){
         });
     });
 
+    // steup slider
+    // variable decleration
+    var slider = document.querySelector(".slider");
+    var nextBtn = document.querySelector(".next-slider-btn");
+    var pvrBtn = document.querySelector(".previous-slider-btn");
+    // call to slider function
+    setSlider(slider, nextBtn, pvrBtn);
+
     // validation on form submition
     document.querySelector("#submit").addEventListener("click", getInTouchValidate);
 
@@ -302,6 +310,57 @@ function setError(errString, errNode){
     return false;
 }
 
+// slider function to setup slider functionality
+function setSlider(slider, nextBtn, pvrBtn){
+    var slides = slider.querySelectorAll(".slide");
+    // var for slide index
+    var i = 1;
+
+    // seting up the dummy slides
+    // last dummy node
+    slider.appendChild(slides[0].cloneNode(true));
+    // first dummy node
+    slider.insertBefore(slides[slides.length-1].cloneNode(true), slider.querySelector(".slide"));
+    slider.style.transform = "translateX(-"+100*i+"%)";
+
+    // event listner for next btn
+    nextBtn.addEventListener("click",function(){
+        if(i <= slides.length){
+            slider.classList.add("slider-transition");
+            if(i <= slides.length-1){
+                i++;
+                console.log( i );
+                slider.style.transform = "translateX(-"+100*i+"%)";
+            } else {
+                i++;
+                slider.style.transform = "translateX(-"+100*i+"%)";
+                setTimeout(function(){ 
+                    slider.classList.remove("slider-transition");
+                    i = 1;
+                    slider.style.transform = "translateX(-"+100*i+"%)";
+                }, 500);
+            }
+        }
+    });
+
+    // event listner for previous btn
+    pvrBtn.addEventListener("click",function(){
+        if(i >= 0){
+            slider.classList.add("slider-transition");
+            if(i > 1){
+                i--;
+                slider.style.transform = "translateX(-"+100*i+"%)";
+            } else {
+                slider.style.transform = "translateX(0)";
+                setTimeout(function(){ 
+                    slider.classList.remove("slider-transition");
+                    i = slides.length;
+                    slider.style.transform = "translateX(-"+100*i+"%)";
+                }, 500);
+            }
+        }
+    });
+}
 
 
 
