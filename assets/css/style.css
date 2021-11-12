@@ -446,10 +446,11 @@ nav{ width: 80%; }
 
 .latest-work-modal figure{
   width: 80%;
-  margin: 50% 0 0 50%;
-  transform: translate(-50%, -65%);
+  margin: 50vh 0 0 50%;
+  transform: translate(-50%,-50%);
 }
 
+.latest-work-modal figure{ max-width: 500px; }
 .hide-me{ display: none; }
 
 /*=============================================
@@ -629,13 +630,14 @@ textarea{ min-height: 86px; }
   right: 2%;
   float: right;
   transition: all .15s ease-in-out;
+  outline: none;
 } 
 
 .form-sumit-modal{
   box-sizing: border-box;
   width: 50%;
   padding: 40px 5%;
-  margin: 50% 0 0 50%;
+  margin: 50vh 0 0 50%;
   background-color: #ffffff;
   border-radius: 25px;
   font: 25px Arial;
@@ -687,7 +689,7 @@ textarea{ min-height: 86px; }
   harvest-history styling starts here for Join Us 
 ================================================*/
 
-.harvest-history .wrapper { text-align: center;  }
+.harvest-history .wrapper { text-align: center; }
 
 .harvest-history h2 {
   margin: 29px 0;
@@ -1272,6 +1274,7 @@ address{ line-height: 17px; }
 
   .work-with { position: static; }
   .hide-me-mobile{ display: none; }
+  nav { width: 0; }
 
   .nav-list{
     width: 100vw;
@@ -1291,11 +1294,13 @@ address{ line-height: 17px; }
   .nav-list a{ color: #efefef; }
 
   .header-social-icons{
+    width: auto;
+    padding: 0;
     position: fixed;
     z-index: 4;
     bottom: 50px;
     left: 50%;
-    transform: translateX(-77%);
+    transform: translateX(-50%);
   }
 
   nav::after{
@@ -1310,7 +1315,10 @@ address{ line-height: 17px; }
     cursor: pointer;
   }
 
-  .nav-cross::after{ content: "\f00d"; }
+  .nav-cross::after{ 
+    position: fixed;
+    content: "\f00d"; 
+  }
 
   .harvester-content p { 
     width: 100%;
@@ -1352,6 +1360,7 @@ address{ line-height: 17px; }
   .work-with .wrapper { width: 70%; }
   .client { width: 35%; }
   .job-categories { width: 30%; }
+  .form-sumit-modal{ width: 90%; }
 
   .slide-content{ 
     width: 85%;
