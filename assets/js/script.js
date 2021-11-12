@@ -201,7 +201,7 @@ function emailSyntaxValidate(){
         var txt = document.querySelector("#email").value
         var txt_err = document.querySelector(".email-err");
         // min length validation
-        if (/^[a-zA-Z._0-9]+@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,5}$/.test(txt.value)) {
+        if (/^[a-zA-Z._0-9]+@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,5}$/.test(txt)) {
             txt_err.classList.add("hide-me");
             return true; 
         }
