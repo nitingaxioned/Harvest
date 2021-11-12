@@ -329,7 +329,6 @@ function setSlider(slider, nextBtn, pvrBtn){
             slider.classList.add("slider-transition");
             if(i <= slides.length-1){
                 i++;
-                console.log( i );
                 slider.style.transform = "translateX(-"+100*i+"%)";
             } else {
                 i++;
